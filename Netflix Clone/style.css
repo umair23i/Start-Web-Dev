@@ -358,3 +358,109 @@ body {
   padding-top: 2vw;
 }
 
+#faqs{
+  margin-top: 50px;
+  padding-left: 100px;
+}
+
+#faqs h1{
+    color: #eae0e2;
+    font-size: 2vw;
+    margin-bottom: 1vw;
+}
+
+#question{
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+
+.question{
+  height: 15vh;
+  width: 80vw;
+  background-color: #272727;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius:1.5vw;
+  border: 2px solid #474747;
+  padding: 30px;
+  cursor: pointer;
+}
+
+.question h4{
+  font-size: 1.5vw;
+  color: white;
+  font-weight: 600;
+}
+
+.cross i{
+  font-size: 2vw;
+  color:white;
+}
+
+.question:hover{
+  background-color: #474747;
+  border: 2px solid #474747 ;
+}
+
+
+#newsletter{
+  margin-top: 50px;
+  padding-left: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text{
+  color: white;
+  text-align: center;
+}
+
+
+.signup input {
+  /* width: 60%;
+  height: 4rem; */
+  border-radius: 50px;
+  outline: none;
+  margin-top: 30px;
+  background-color: #4a4948;
+  border: 1px solid #6e6e6e;
+  opacity: 0.8;
+  position: relative;
+  padding: 22px 131px 20px 16px;
+}
+.signup input::placeholder {
+  color: white;
+  font-size: 18px;
+  font-weight: 400;
+  transition: transform 0.3s ease, font-size 0.3s ease;
+}
+
+.signup input:focus::placeholder {
+  transform: translateY(-20px);
+  font-size: 10px;
+}
+
+.signup input {
+  color: white;
+  font-size: large;
+}
+.signup input:focus {
+  border: 3px solid #ffffff;
+  transition: ease-in 0.1s;
+  opacity: 1;
+}
+
+.signup button {
+  background-color: #e50914;
+  color: white;
+  padding: 15px 50px 15px 50px;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 25px;
+  margin-top: 30px;
+  cursor: pointer;
+}
