@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+          let num = parseFloat(prompt("enter num"));
+      //     function fac(number){
+      //         let arr = Array.from(Array(number+1).keys());
+      //         let c = arr.slice(1,).reduce((a,b)=>{
+      //             return a*b;
+      //         })
+      //         return c;
+      //     }
+      //    alert(fac(num));
+
+      function forfor(number) {
+        let fac = 1;
+        for (let index = 0; index <= number; index++) {
+          fac = fac * index;
+        }
+        return fac;
+      }
+
+      alert(forfor(num));
+    </script>
+  </body>
+</html>

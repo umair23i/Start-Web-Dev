@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Gilroy";
+    }
+    html,
+    body {
+      height: 100%;
+      width: 100%;
+    }
+    .box {
+      width: 43px;
+      padding: 43px;
+      height: 43px;
+      border: 2px solid red;
+      color: black;
+      margin: 14px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+
+    <script>
+      function namerandom() {
+        let colors = {
+          1: "red",
+          2: "blue",
+          3: "green",
+          4: "black",
+          5: "yellow",
+          6: "pink",
+          7: "darkblue",
+          8: "royalblue",
+        };
+
+        document.querySelectorAll(".box").forEach((e) => {
+          let rand = Math.floor(Math.random() * 8) + 1; // Generate a random number between 1 and 8
+          console.log(rand);
+          e.style.backgroundColor = colors[rand]; // Assign a random color from the colors object
+        });
+      }
+
+      namerandom();
+      function rgbcolor() {
+        let box = document.getElementsByClassName("box");
+        function randomcolor() {
+          let val1 = Math.ceil(0 + Math.random() * 255);
+          let val2 = Math.ceil(0 + Math.random() * 255);
+          let val3 = Math.ceil(0 + Math.random() * 255);
+          return `rgb(${val1},${val2},${val3})`;
+        }
+        console.log(randomcolor());
+
+        Array.from(box).forEach((e) => {
+          e.style.backgroundColor = randomcolor();
+        });
+      }
+      rgbcolor();
+    </script>
+  </body>
+</html>

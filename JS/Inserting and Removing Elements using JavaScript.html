@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inserting and Removing Elements using JavaScript</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box" style="display: flex" data-created="Umair">
+        Hello I am Box
+      </div>
+    </div>
+
+    <script>
+      // document.querySelector(".box").innerHTML they show inner div or other tage inside
+      // document.querySelector(".box").innerHTML = "this is my box" we also change the content inside this tag
+
+      // document.querySelector(".box").innerText they show only text inside this tag
+
+      // document.querySelector(".box").outerHtml they show the tag inside and outer both
+
+      // document.querySelector(".box").tagName  they show the type of tag they use
+
+      // document.querySelector(".box").nodeName they show the node name e.g : text node + comments nodes or other
+
+      // document.querySelector(".box").textContent they show the content inside the divs
+
+      // document.querySelector(".box").hidden we change the also we add = true or false in your choise when we add true they add a hidden attribute inside those tag
+
+      // document.querySelector(".box").hasAttribute("style") they use to check the attribute to this box they return only true or false
+
+      // document.querySelector(".box").getAttribute("style") if they have this attribute they show the style propertys you use in this box
+
+      // document.querySelector(".box").setAttribute("style","display = inline") if they have style attribute they set the property also
+
+      // document.querySelector(".box").dataset
+
+    //   let div = document.createElement("div");
+    //   div.innerHTML= "Hello this is me <b>by Umair</b>"
+    //   div.setAttribute = ("class", "created");
+    //   document.querySelector(".container").append(div);
+    //   document.querySelector(".container").prepend(div);
+    //   document.querySelector(".container").before(div);
+    //   document.querySelector(".container").replaceWith(div);
+
+    // let cont = document.querySelector(".container");
+    // cont.insertAdjacentHTML("beforebegin", "this is box")
+    // cont.insertAdjacentHTML("afterbegin", "this is box")
+    // cont.insertAdjacentHTML("afterend", "this is box")
+    // cont.insertAdjacentHTML("beforeend", "this is box")
+
+
+    // document.querySelector(".container").classList they show all class used in this tag
+    // document.querySelector(".container").className they show all class Name used in this tag
+
+        // document.querySelector(".container").classList.add("harry") they add a new class in this tag or other
+        // document.querySelector(".container").classList.remove("harry") they add a remove class in this tag or other
+
+  // document.querySelector(".container").classList.contain("harry") they check the class have in this div if have they return true or false
+
+
+        // document.querySelector(".container").toggle("harry") if they have this class they remove if not they add it one time they remove second time they add
+    </script>
+  </body>
+</html>

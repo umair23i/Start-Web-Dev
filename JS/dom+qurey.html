@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Gilroy";
+    }
+    html,
+    body {
+      height: 100%;
+      width: 100%;
+    }
+    .box {
+      width: 43px;
+      padding: 43px;
+      height: 43px;
+      border: 2px solid red;
+      color: black;
+      margin: 14px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="box">helo</div>
+      <div class="box">6</div>
+      <div id="red" class="box">43</div>
+      <div class="box">45</div>
+      <div class="box">4</div>
+    </div>
+
+    <script>
+      console.log("this is about DOM Qurey");
+
+      // let box = document.getElementsByClassName("box");
+      // console.log(box)
+
+      // box[2].style.backgroundColor = "red";
+      // this is target the index if you add more div they only applys on the particular index
+      // document.getElementById("red").style.backgroundColor = "green";
+      // document.querySelector(".box").style.backgroundColor="red";
+      // they only change the green the first .box class only one
+
+      // document.querySelectorAll(".box").forEach(e=>{
+      //   console.log(e);
+      //   e.style.backgroundColor = "green";
+      // }
+      // )
+      //--they return a html collection and for each is use to interate the collection
+      
+      // -- if you add green color in all then use this
+
+
+      let a = document.getElementsByTagName("div");
+      console.log(a)
+      
+      
+      </script>
+  </body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom Pracitce</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Gilroy";
+    }
+    html,
+    body {
+      height: 100%;
+      width: 100%;
+    }
+    .container {
+      max-width: 100vw;
+      width: 90vw;
+      margin: auto;
+      margin-top: 3vw;
+      background-color: black;
+      height: 25vh;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    #card {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      background-color: black;
+      height: 100%;
+      width: 100%;
+      padding: 30px 30px 30px;
+    }
+    .thum {
+      height: 22vh;
+      width: 20vw;
+      border-radius: 10px;
+      object-fit: cover;
+      object-position: center;
+      position: relative;
+    }
+    .thum-img {
+      height: 22vh;
+      width: 20vw;
+      border-radius: 10px;
+      object-fit: cover;
+      object-position: center;
+      border: 1.5px solid white;
+    }
+    .duration {
+      position: absolute;
+      left: 75%;
+      top: 70%;
+      right: 10%;
+      font-size: 13px;
+      font-weight: 100;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      background-color: black;
+      color: white;
+      height: 20px;
+      width: 50px;
+      text-align: center;
+      border-radius: 20px;
+    }
+
+    .content {
+      padding: 30px;
+      color: white;
+    }
+    #title {
+      font-size: 25px;
+      font-weight: 500;
+    }
+    .details {
+      font-size: 10px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div id="card">
+        <div class="thum">
+          <img class="thum-img" src="" alt="" />
+          <div class="duration"></div>
+        </div>
+        <div class="content">
+          <h2 id="title"></h2>
+          <span class="details"></span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function userinput(title, thum, duration, views, ago, cName) {
+        title = prompt("enter a Title");
+        document.getElementById("title").innerHTML = title;
+        duration = prompt("Enter Video Duration");
+        document.getElementsByClassName("duration")[0].innerHTML = duration;
+        thum = prompt("Enter A Image Url");
+        document.getElementsByClassName("thum-img")[0].src = thum;
+        views = prompt("Enter Views number");
+        if (views >= 1000000) views = views / 1000000 + "M";
+        else if (views >= 1000) views = views / 1000 + "k";
+        ago = prompt("Enter how many month ago");
+        cName = prompt("Enter A Channel Name");
+        document.querySelector(".details").innerHTML =
+          cName + " . " + views + " views. " + ago + " months ago";
+      }
+
+      function manual(title, thum, duration, views, ago, cName) {
+        document.getElementById("title").innerHTML = title;
+        document.getElementsByClassName("duration")[0].innerHTML = duration;
+        document.getElementsByClassName("thum-img")[0].src = thum;
+        if (views >= 1000000) views = views / 1000000 + "M";
+        else if (views >= 1000) views = views / 1000 + "k";
+        document.querySelector(".details").innerHTML =
+          cName + " . " + views + " views. " + ago + " months ago";
+      }
+        // userinput();
+        manual(
+          "this is box",
+          "https://platinumlist.net/guide/wp-content/uploads/2023/03/IMG-worlds-of-adventure.webp",
+          "90:90",
+          10000,
+          "3",
+          "code with harry"
+        );
+    </script>
+  </body>
+</html>
