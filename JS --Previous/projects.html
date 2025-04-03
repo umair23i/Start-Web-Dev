@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Gilroy';
+    }
+    html , body{
+        height: 100%;
+        width: 100%;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 50px 50px 50px 50px;
+    }
+    h1{
+        font-size: 100px;
+        color: royalblue;
+    }
+    .inputs{
+        margin: 50px;
+    }
+
+    .inputs input{
+        width: 18vw;
+        height: 10vh;
+    }
+    .inputs input::placeholder{
+        padding-left: 10px;
+    }
+
+    .inputs input:focus::placeholder{
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+        color: gray;
+        font-size: 10px;
+    }
+    
+   
+</style>
+<body>
+    <div class="container">
+        <h1>Bookmark Manager</h1>
+        <div class="inputs">
+        <label for="input">Bookmark Name</label>
+        <input id="name" type="text" placeholder="Bookmark Name">
+        <label for="input">Bookmark Url</label>
+        <input id="link" type="text" placeholder="Bookmark Url">
+    </div>
+        <div id="links">
+            
+        </div>
+    </div>
+
+
+    <script>
+        let name = document.getElementById("name");
+        let link = document.getElementById("link");
+        let linkscont = document.getElementById("links");
+
+        document.addEventListener("keypress" , (e)=>{
+            if(e.key === "Enter" && name.value.trim() && link.value.trim()){
+                linkscont.innerHTML += `<a href="${link.value}" target="_blank">${name.value}</a>`;
+                
+                name.value = link.value = "";
+            }
+            else if (e.key === "Enter") {
+                alert("Please fill in both fields.");
+            }})
+    </script>
+</body>
+</html>
